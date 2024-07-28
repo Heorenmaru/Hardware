@@ -3,7 +3,6 @@
  *
  *  Created on: Jun 2, 2022
  *      Author: Heorenmaru
- *      !!! OPEN SOURCE !!!
  */
 
 #include "usb_snd.h"
@@ -77,13 +76,13 @@ uint8_t usb_add_uint64(uint64_t data){
 //////////////////////////////////////////////
 // float/double val
 //////////////////////////////////////////////
-uint8_t usb_add_float(float *data){
+uint8_t usb_add_float(float data){
 	union {
 		float fVal;
 		uint8_t fArr[4];
 	} uF_arr;
 
-	uF_arr.fVal = *data;
+	uF_arr.fVal = data;
 
 	usb_buff[usb_cursor] = uF_arr.fArr[0];
 	usb_cursor++;
@@ -101,13 +100,13 @@ uint8_t usb_add_float(float *data){
 	return usb_cursor;
 }
 
-uint8_t usb_add_double(double *data){
+uint8_t usb_add_double(double data){
 	union {
 		double dVal;
 		uint8_t dArr[8];
 	} uD_arr;
 
-	uD_arr.dVal = *data;
+	uD_arr.dVal = data;
 
 	usb_buff[usb_cursor] = uD_arr.dArr[0];
 	usb_cursor++;
@@ -156,7 +155,6 @@ void usb_rst_cursor(){
 USBD_StatusTypeDef usb_last_status(){
 	usb_cursor = 0;
 }
-
 //////////////////////////////////////////////
 // send buffer
 //////////////////////////////////////////////
@@ -201,97 +199,6 @@ USBD_StatusTypeDef usb_send_buff(){
 
 
 
-
-
-
-
-
-
-//////////////////////////////////////////////
-// Receive Packet
-
-uint8_t usb_rx[256];  //usb rx buffer
-
-uint8_t usb_ln = 0;
-uint8_t usb_stp = 0;
-
-void usb_def_callback(uint8_t *arr, uint8_t len){
-
-}
-
-void (*f_rx)(uint8_t *, uint8_t) = &usb_def_callback;
-
-
-
-
-
-void usb_set_callback(void (*func)(uint8_t *, uint8_t)){
-	f_rx = func;
-}
-/**********************************************************
-in USB_DEVICE/App/usbd_cdc_if.c
-replace:
-
-
-static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
-{
-	uint8_t byte = 0;
-	uint8_t ln = 0;
-  / USER CODE BEGIN 6 /
-  USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
-  USBD_CDC_ReceivePacket(&hUsbDeviceFS);
-
-  //ln = *Len;
-  for(uint32_t i = 0; i< *Len; i++){
-	  //byte = Buf[i];
-	  usb_recv(Buf[i]);
-  }
-
-  return (USBD_OK);
-  / USER CODE END 6 /
-}
-************************************************************/
-
-void usb_recv(uint8_t b){
-
-	//preamp
-	if(usb_stp == 0){
-		if(b == 0xAA ){
-			usb_stp++;
-		}else{
-			usb_stp = 0;
-		}
-		return;
-	}
-	//len
-	if(usb_stp == 1){
-		usb_ln = b;
-		usb_stp++;
-		if(usb_ln == 0){
-			usb_stp = 0;
-			return;
-		}
-		return;
-	}
-	//data
-	if(usb_stp < usb_ln+2){
-
-		usb_rx[usb_stp - 2] = b;
-		usb_stp++;
-
-
-		if(usb_stp == usb_ln+2){
-			usb_stp = 0;
-			f_rx(usb_rx, usb_ln);
-			//usb_callback();
-		}
-		return;
-	}else{
-		//crc
-		usb_stp = 0;
-	}
-
-}
 
 
 
