@@ -1,8 +1,6 @@
 /*
- * lsm6ds3.h
- *
- *  Created on: Jan 13, 2022
- *      Author: Heorenmaru
+ *   Author: Heorenmaru
+ *   License: CC-BY-SA
  */
 
 #ifndef INC_LSM6DS3_H_

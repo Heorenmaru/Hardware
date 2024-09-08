@@ -290,6 +290,9 @@ def StartListener(callback_fn = _rx_calback, port = find_free_port(dev_vid_pid),
             serial_thread.start()
     print(cblue, "[logger_main] exit", creset)            
 
+def StartListener_BG(callback_fn = _rx_calback, port = find_free_port(dev_vid_pid), autofind = True):
+    listener = Thread(target=StartListener, args=(callback_fn, port, autofind, ), daemon=True) 
+    listener.start()
 def StopLogger():
     global ext_trg
     global ser

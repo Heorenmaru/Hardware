@@ -1,8 +1,6 @@
 /*
- * nrf24l01.h
- *
- *  Created on: 27 июл. 2024 г.
- *      Author: Heorenmaru
+ *   Author: Heorenmaru
+ *   License: CC-BY-SA
  */
 
 #ifndef INC_NRF24L01_H_

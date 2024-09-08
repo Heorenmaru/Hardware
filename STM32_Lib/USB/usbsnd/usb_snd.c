@@ -1,11 +1,7 @@
 /*
- * usb_snd.c
- *
- *  Created on: Jun 2, 2022
- *      Author: Heorenmaru
- *      !!! OPEN SOURCE !!!
+ *   Author: Heorenmaru
+ *   License: CC-BY-SA
  */
-
 #include "usb_snd.h"
 
 uint8_t usb_cursor = 0;

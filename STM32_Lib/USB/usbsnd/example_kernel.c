@@ -1,8 +1,6 @@
 /*
- * au_logic.c
- *
- *  Created on: Mar 16, 2022
- *      Author: Heorenmaru
+ *   Author: Heorenmaru
+ *   License: CC-BY-SA
  */
 
 #include "kernel.h"

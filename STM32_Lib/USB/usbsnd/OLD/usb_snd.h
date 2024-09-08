@@ -1,8 +1,6 @@
 /*
- * usb_snd.h
- *
- *  Created on: Jun 2, 2022
- *      Author: Heorenmaru
+ *   Author: Heorenmaru
+ *   License: CC-BY-SA
  */
 
 #ifndef INC_USB_SND_H_
