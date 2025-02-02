@@ -34,12 +34,3 @@ uint8_t crc8Maxim(uint8_t *data, uint16_t len) {
 	return crc;
 }
 
-//deprecated
-uint8_t crc8MaximARTS(uint8_t *data, uint16_t len) {
-	uint8_t crc = 0;
-	for (uint16_t i = 0; i < len; i++) {
-		if(i == 20) { continue; }
-		crc = crc8Table[crc ^ data[i]];
-	}
-	return crc;
-}

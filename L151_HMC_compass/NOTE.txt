@@ -1,0 +1,1 @@
+The module says HMC5883L, but it is actually QMC5883L.

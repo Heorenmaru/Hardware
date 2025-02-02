@@ -1,0 +1,3 @@
+../User/Src/kernel.c:56:6:usb_callback	32	static
+../User/Src/kernel.c:111:6:kernel_init	8	static
+../User/Src/kernel.c:128:6:kernel_main	48	static
