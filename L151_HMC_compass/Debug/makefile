@@ -65,8 +65,8 @@ all: main-build
 main-build: L151_HMC.elf secondary-outputs
 
 # Tool invocations
-L151_HMC.elf L151_HMC.map: $(OBJS) $(USER_OBJS) C:\Users\Heorenmaru\Desktop\L151_HMC\STM32L151CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "L151_HMC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Heorenmaru\Desktop\L151_HMC\STM32L151CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L151_HMC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+L151_HMC.elf L151_HMC.map: $(OBJS) $(USER_OBJS) C:\Users\Heorenmaru\Desktop\Git_Projects\Hardware\L151_HMC_compass\STM32L151CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "L151_HMC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Heorenmaru\Desktop\Git_Projects\Hardware\L151_HMC_compass\STM32L151CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L151_HMC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

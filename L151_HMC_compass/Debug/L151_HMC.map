@@ -3835,13 +3835,11 @@ Discarded input sections
                 0x0000000000000000      0x100 ./User/Src/crclib.o
  .text.crc8Maxim
                 0x0000000000000000       0x4c ./User/Src/crclib.o
- .text.crc8MaximARTS
-                0x0000000000000000       0x54 ./User/Src/crclib.o
- .debug_info    0x0000000000000000      0x193 ./User/Src/crclib.o
- .debug_abbrev  0x0000000000000000       0xe5 ./User/Src/crclib.o
+ .debug_info    0x0000000000000000      0x134 ./User/Src/crclib.o
+ .debug_abbrev  0x0000000000000000       0xc7 ./User/Src/crclib.o
  .debug_aranges
-                0x0000000000000000       0x28 ./User/Src/crclib.o
- .debug_ranges  0x0000000000000000       0x18 ./User/Src/crclib.o
+                0x0000000000000000       0x20 ./User/Src/crclib.o
+ .debug_ranges  0x0000000000000000       0x10 ./User/Src/crclib.o
  .debug_macro   0x0000000000000000      0x1d8 ./User/Src/crclib.o
  .debug_macro   0x0000000000000000      0xa6c ./User/Src/crclib.o
  .debug_macro   0x0000000000000000      0x10f ./User/Src/crclib.o
@@ -3879,10 +3877,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x15c ./User/Src/crclib.o
  .debug_macro   0x0000000000000000      0x3ce ./User/Src/crclib.o
  .debug_macro   0x0000000000000000       0x10 ./User/Src/crclib.o
- .debug_line    0x0000000000000000      0x727 ./User/Src/crclib.o
- .debug_str     0x0000000000000000    0x71b7a ./User/Src/crclib.o
+ .debug_line    0x0000000000000000      0x6ea ./User/Src/crclib.o
+ .debug_str     0x0000000000000000    0x71b8a ./User/Src/crclib.o
  .comment       0x0000000000000000       0x51 ./User/Src/crclib.o
- .debug_frame   0x0000000000000000       0x60 ./User/Src/crclib.o
+ .debug_frame   0x0000000000000000       0x38 ./User/Src/crclib.o
  .ARM.attributes
                 0x0000000000000000       0x2d ./User/Src/crclib.o
  .group         0x0000000000000000        0xc ./User/Src/handlers.o
@@ -5593,7 +5591,7 @@ LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_line    0x000000000001203b      0xb80 ./User/Src/kernel.o
  .debug_line    0x0000000000012bbb      0xdfb ./User/Src/usb_snd.o
 
-.debug_str      0x0000000000000000    0x7a073
+.debug_str      0x0000000000000000    0x7a0bc
  .debug_str     0x0000000000000000    0x719fb ./Core/Src/gpio.o
                                       0x71c80 (size before relaxing)
  .debug_str     0x00000000000719fb      0x4ad ./Core/Src/i2c.o
@@ -5640,9 +5638,9 @@ LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                                       0x767a4 (size before relaxing)
  .debug_str     0x0000000000079d90       0x78 ./USB_DEVICE/Target/usbd_conf.o
                                       0x7769e (size before relaxing)
- .debug_str     0x0000000000079e08      0x16b ./User/Src/kernel.o
-                                      0x76d83 (size before relaxing)
- .debug_str     0x0000000000079f73      0x100 ./User/Src/usb_snd.o
+ .debug_str     0x0000000000079e08      0x1b4 ./User/Src/kernel.o
+                                      0x76da1 (size before relaxing)
+ .debug_str     0x0000000000079fbc      0x100 ./User/Src/usb_snd.o
                                       0x7689a (size before relaxing)
 
 .comment        0x0000000000000000       0x50
