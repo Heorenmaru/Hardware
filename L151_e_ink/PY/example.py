@@ -223,8 +223,8 @@ if __name__ == "__main__":
     time.sleep(2)
 
     checkDevice()
-    image_path = 'test.png'  # Замените на путь к вашему изображению
-    black_and_white_array = convert_to_black_and_white(image_path)
+    image_path = '30.png'  # Замените на путь к вашему изображению
+    black_and_white_array = convert_to_black_and_white(image_path,threshold=200)
 
     if black_and_white_array is not None:
         print("Sending img...")
